@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://moodle.dilab.ca/pluginfile.php/7631/mod_vpl/intro/sample_catalog.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Algoma University Course Catalog (Sample)</title></head>
+<body data-new-gr-c-s-check-loaded="14.1331.0" data-gr-ext-installed="">
+<h1>Course Catalog</h1>
+<p>
+  This is a <strong>sample</strong> catalog for local testing only.<br>
+  The auto-grader uses a <em>different</em> catalog with different course codes.
+  Your HTML parser must be general — do not hardcode specific course codes or titles.
+</p>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Course Code</th>
+      <th>Title</th>
+      <th>Credits</th>
+      <th>Prerequisites</th>
+      <th>Cross-listed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>COSC 1047</td>
+      <td>Programming for Business</td>
+      <td>3</td>
+      <td>None</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>COSC 2006</td>
+      <td>Programming Fundamentals I</td>
+      <td>3</td>
+      <td>None</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>COSC 2007</td>
+      <td>Programming Fundamentals II</td>
+      <td>3</td>
+      <td>COSC 2006</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>COSC 3506</td>
+      <td>Software Systems Development</td>
+      <td>3</td>
+      <td>COSC 2007</td>
+      <td>ITEC 3506</td>
+    </tr>
+    <tr>
+      <td>ITEC 3506</td>
+      <td>Software Systems Development</td>
+      <td>3</td>
+      <td>COSC 2007</td>
+      <td>COSC 3506</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <strong>How to test locally:</strong><br>
+  <code>curl -X POST -F "file=@sample_catalog.html;type=text/html" http://localhost:8000/api/v1/admin/catalog/import</code><br>
+  <code>curl http://localhost:8000/api/v1/catalog/courses/COSC3506</code>
+</p>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true" style="visibility: visible !important;"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
